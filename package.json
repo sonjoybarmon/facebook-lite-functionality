@@ -1,0 +1,33 @@
+{
+  "name": "facebook-lite",
+  "version": "1.0.0",
+  "description": "create sample functionality facebook",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonjoybarmon/facebook-lite-functionality.git"
+  },
+  "author": "sonjoybarman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sonjoybarmon/facebook-lite-functionality/issues"
+  },
+  "homepage": "https://github.com/sonjoybarmon/facebook-lite-functionality#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "gravatar": "^1.8.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.3",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
