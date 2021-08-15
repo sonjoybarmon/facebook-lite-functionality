@@ -3,6 +3,7 @@ const passport = require("passport");
 
 // dot env import
 const dotenv = require("dotenv");
+const cors = require("cors");
 
 // route
 const postRoute = require("./routes/api/posts");
@@ -10,6 +11,7 @@ const profileRoute = require("./routes/api/profile");
 const userRoute = require("./routes/api/users");
 
 const app = express();
+app.use(cors());
 
 dotenv.config();
 
