@@ -14,6 +14,7 @@ import store from "./redux/store/store";
 import { clearCurrentProfile } from "./redux/actions/profileAction";
 import Dashboard from "./components/Dashboard/Dashboard";
 import PrivateRoute from "./components/common/PrivateRoute";
+import CreacteProfile from "./components/createProfile/CreacteProfile";
 
 // check for token validation
 if (localStorage.token) {
@@ -48,6 +49,11 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              <PrivateRoute
+                exact
+                path="/create-profile"
+                component={CreacteProfile}
+              />
             </Switch>
           </div>
           <Footer />

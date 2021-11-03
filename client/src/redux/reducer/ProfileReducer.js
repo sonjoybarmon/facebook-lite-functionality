@@ -1,7 +1,6 @@
 import {
   CLEAR_CURRENT_PROFILE,
   GET_PROFILE,
-  GET_PROFILES,
   PROFILE_LOADING,
 } from "../actions/type";
 

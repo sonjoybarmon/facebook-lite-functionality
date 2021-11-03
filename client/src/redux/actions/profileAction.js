@@ -1,5 +1,5 @@
 import axios from "axios";
-import { CLEAR_CURRENT_PROFILE, GET_PROFILE } from "./type";
+import { CLEAR_CURRENT_PROFILE, GET_PROFILE, GET_USER_ERROR } from "./type";
 
 export const getCurrentProfile = () => (dispatch) => {
   dispatch(setProfileLoading());
@@ -15,6 +15,20 @@ export const getCurrentProfile = () => (dispatch) => {
       dispatch({
         type: GET_PROFILE,
         payload: {},
+      })
+    );
+};
+
+// create profile
+
+export const createProfile = (data, location) => (dispatch) => {
+  axios
+    .post("http://localhost:8000/api/profile", data)
+    .then((res) => location.push("/dashboard"))
+    .catch((err) =>
+      dispatch({
+        type: GET_USER_ERROR,
+        payload: err.response.data,
       })
     );
 };
